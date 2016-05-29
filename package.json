@@ -21,5 +21,17 @@
   "bugs": {
     "url": "https://github.com/saptar/myList/issues"
   },
-  "homepage": "https://github.com/saptar/myList#readme"
+  "homepage": "https://github.com/saptar/myList#readme",
+  "dependencies": {
+    "async": "^2.0.0-rc.5",
+    "bcrypt-nodejs": "0.0.3",
+    "bitgo": "^1.8.0",
+    "body-parser": "^1.15.1",
+    "compression": "^1.6.2",
+    "express": "^4.13.4",
+    "express-flash": "0.0.2",
+    "express-session": "^1.13.0",
+    "express-validator": "^2.20.5",
+    "passport": "^0.3.2"
+  }
 }
