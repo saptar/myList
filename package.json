@@ -1,0 +1,25 @@
+{
+  "name": "my-entertainment-list",
+  "version": "1.0.0",
+  "description": "this is a hosted web project to list down set of assets among group of friends.",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo no test found"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saptar/myList.git"
+  },
+  "keywords": [
+    "list"
+  ],
+  "author": "saptarshidutta31@yahoo.co.in",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saptar/myList/issues"
+  },
+  "homepage": "https://github.com/saptar/myList#readme"
+}
