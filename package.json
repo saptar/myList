@@ -23,17 +23,20 @@
   },
   "homepage": "https://github.com/saptar/myList#readme",
   "dependencies": {
-    "async": "^2.0.0-rc.5",
+    "async": "^2.0.0-rc.6",
     "bcrypt-nodejs": "0.0.3",
     "bitgo": "^1.8.0",
     "body-parser": "^1.15.1",
     "compression": "^1.6.2",
+    "crypto": "0.0.3",
     "dotenv": "^2.0.0",
     "express": "^4.13.4",
     "express-flash": "0.0.2",
     "express-session": "^1.13.0",
     "express-validator": "^2.20.5",
+    "lodash": "^4.13.1",
     "lusca": "^1.4.1",
+    "mongoose": "^4.4.20",
     "mustache-express": "^1.2.2",
     "passport": "^0.3.2"
   }
