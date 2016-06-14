@@ -47,19 +47,22 @@ signup.postSignup = function(req, res, next){
 	
 	User.findOne({email: req.body.email}, function(err,existingUser){
 		if(existingUser){
-			//req.flash('errors',{msg:'An user with this email id already exits'});
+			req.flash('errors',{msg:'An user with this email id already exits'});
 			// TODO: change the redirect to login page
-			res.redirect('/');
+			res.redirect('/login');
 		}
 		else{
-			user.save(function(err){
-				if(err){
-					return next(err);
-				}
-				console.log('user successfully saved ; redirecting to home page');
-				return res.redirect('/');
-				// TODO: use passports req.login to call login and redirect user
-			})
+			user.save(function(err) {
+		      if (err) {
+		        return next(err);
+		      }
+		      req.logIn(user, function(err) {
+		        if (err) {
+		          return next(err);
+		        }
+		        res.redirect('/');
+		      });
+			});
 		}
 	});
 	
