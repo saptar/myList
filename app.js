@@ -75,7 +75,15 @@ app.post('/signup',userController.postSignup);
 app.get('/login',userController.getLogin);
 app.post('/login',userController.postLogin);
 
-app.listen(app.get('port'),'192.168.0.5', function() {
+/*
+ * OAuth Authentication routes
+ */
+app.get('/auth/facebook', passport.authenticate('facebook', {scope: ['email']}));
+app.get('/auth/facebook/callback', passport.authenticate('facebook',{failureRedirect: '/login'}), function(req, res){
+	res.redirect(req.session.returnTo || '/');
+});
+
+app.listen(app.get('port'),'localhost', function() {
 	  console.log('Express server listening on port %d in %s mode', app.get('port'), app.get('env'));
 	});
 module.exports = app;
